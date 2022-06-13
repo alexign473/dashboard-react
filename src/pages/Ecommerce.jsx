@@ -58,6 +58,7 @@ export const Ecommerce = () => {
           className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg
           m-3 p-4 rounded-2xl md:w-780'
         >
+          {/* Heading */}
           <div className='flex justify-between'>
             <p className='font-semibold text-xl'>Revenue Updates</p>
             <div className='flex items-center gap-4'>
@@ -82,6 +83,7 @@ export const Ecommerce = () => {
             </div>
           </div>
 
+          {/* Budget element */}
           <div className='mt-10 flex gap-10 flex-wrap justify-center'>
             <div className='border-r-1 border-color m-4 pr-10'>
               <div>
@@ -96,6 +98,7 @@ export const Ecommerce = () => {
                 </div>
                 <p className='text-gray-500 mt-1'>Budget</p>
               </div>
+              {/* Expense element */}
               <div className='mt-8'>
                 <p>
                   <span className='text-3xl font-semibold'>$9,999</span>
@@ -103,6 +106,7 @@ export const Ecommerce = () => {
                 <p className='text-gray-500 mt-1'>Expense</p>
               </div>
 
+              {/* Sparkline element */}
               <div className='mt-5'>
                 <SparkLine
                   currentColor='blue'
@@ -114,6 +118,7 @@ export const Ecommerce = () => {
                   color='blue'
                 />
               </div>
+              {/* Download report button */}
               <div className='mt-10'>
                 <Button
                   color='white'
@@ -124,6 +129,7 @@ export const Ecommerce = () => {
                 />
               </div>
             </div>
+            {/* Stacked element */}
             <div>
               <Stacked width='320px' height='360px' />
             </div>

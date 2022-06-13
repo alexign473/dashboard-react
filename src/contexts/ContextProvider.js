@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
 
-// какая кнопка навигации активна
+// активная кнопка навигации
 const initialState = {
   chat: false,
   cart: false,
