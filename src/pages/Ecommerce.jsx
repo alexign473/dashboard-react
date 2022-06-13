@@ -85,15 +85,15 @@ export const Ecommerce = () => {
           <div className='mt-10 flex gap-10 flex-wrap justify-center'>
             <div className='border-r-1 border-color m-4 pr-10'>
               <div>
-                <p>
+                <div className='flex items-center'>
                   <span className='text-3xl font-semibold'>$99,999</span>
                   <span
-                    className='p-1.5 hover:drop-shadow-xl cursor-pointer 
+                    className='p-1.5 ml-1 hover:drop-shadow-xl cursor-pointer 
                     rounded-full text-white bg-green-400 text-xs'
                   >
                     23%
                   </span>
-                </p>
+                </div>
                 <p className='text-gray-500 mt-1'>Budget</p>
               </div>
               <div className='mt-8'>
@@ -115,7 +115,13 @@ export const Ecommerce = () => {
                 />
               </div>
               <div className='mt-10'>
-                <Button color='white' bgColor='blue' text='Download Report' borderRadius='10px' />
+                <Button
+                  color='white'
+                  bgColor='blue'
+                  text='Download Report'
+                  borderRadius='10px'
+                  size='md'
+                />
               </div>
             </div>
             <div>
