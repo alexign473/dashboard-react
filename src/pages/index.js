@@ -6,6 +6,7 @@ export * from './Editor';
 export * from './Customers';
 export * from './ColorPicker';
 export * from './Calendar';
+export * from './Layout';
 export * from './Charts/Area';
 export * from './Charts/Bar';
 export * from './Charts/ColorMapping';

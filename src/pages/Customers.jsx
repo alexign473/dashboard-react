@@ -15,10 +15,11 @@ import {
 // project imports
 import { customersData, customersGrid } from '../data/dummy';
 import { Header } from '../components';
+import { Layout } from '.';
 
 export const Customers = () => {
   return (
-    <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl'>
+    <Layout>
       <Header category='Page' title='Customers' />
       <GridComponent
         id='gridcomp'
@@ -39,6 +40,6 @@ export const Customers = () => {
         </ColumnsDirective>
         <Inject services={[Page, Toolbar, Selection, Edit, Sort, Filter]} />
       </GridComponent>
-    </div>
+    </Layout>
   );
 };

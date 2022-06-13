@@ -11,10 +11,11 @@ import {
 
 import { employeesData, contextMenuItems, employeesGrid } from '../data/dummy';
 import { Header } from '../components';
+import { Layout } from '.';
 
 export const Employees = () => {
   return (
-    <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl'>
+    <Layout>
       <Header category='Page' title='Employees' />
       <GridComponent
         id='gridcomp'
@@ -31,6 +32,6 @@ export const Employees = () => {
         </ColumnsDirective>
         <Inject services={[Page, Search, Toolbar]} />
       </GridComponent>
-    </div>
+    </Layout>
   );
 };
