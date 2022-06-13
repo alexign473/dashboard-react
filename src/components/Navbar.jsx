@@ -13,8 +13,16 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 // панель навигации
 export const Navbar = () => {
-  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize } =
-    useStateContext();
+  const {
+    activeMenu,
+    setActiveMenu,
+    isClicked,
+    setIsClicked,
+    handleClick,
+    screenSize,
+    setScreenSize,
+    currentColor,
+  } = useStateContext();
 
   // измерение ширины экрана для правильной отрисовки сайдбара
   useEffect(() => {
@@ -40,7 +48,7 @@ export const Navbar = () => {
       <NavButton
         title='Menu'
         onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-        color='blue'
+        color={currentColor}
         icon={<AiOutlineMenu />}
       />
       <div className='flex'></div>
@@ -49,7 +57,7 @@ export const Navbar = () => {
         onClick={() => {
           handleClick('cart');
         }}
-        color='blue'
+        color={currentColor}
         icon={<FiShoppingCart />}
       />
       <NavButton
@@ -58,7 +66,7 @@ export const Navbar = () => {
         onClick={() => {
           handleClick('chat');
         }}
-        color='blue'
+        color={currentColor}
         icon={<BsChatLeft />}
       />
       <NavButton
@@ -67,7 +75,7 @@ export const Navbar = () => {
         onClick={() => {
           handleClick('notification');
         }}
-        color='blue'
+        color={currentColor}
         icon={<RiNotification3Line />}
       />
       <TooltipComponent content='Profile' position='BottomCenter'>

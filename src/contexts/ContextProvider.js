@@ -18,7 +18,26 @@ export const ContextProvider = ({ children }) => {
   const [isClicked, setIsClicked] = useState(initialState);
   // ширина экрана
   const [screenSize, setScreenSize] = useState(null);
+  // тема
+  const [currentColor, setCurrentColor] = useState('#03c9d7');
+  const [currentMode, setCurrentMode] = useState('Light');
+  // меню настроек темы
+  const [themeSettings, setThemeSettings] = useState(false);
 
+  // обработчик темы и сохранение в localstorage
+  const setMode = (e) => {
+    setCurrentMode(e.target.value);
+    localStorage.setItem('themeMode', e.target.value);
+    setThemeSettings(false);
+  };
+
+  const setColor = (color) => {
+    setCurrentColor(color);
+    localStorage.setItem('colorMode', color);
+    setThemeSettings(false);
+  };
+
+  // обработчик кнопок навигации
   const handleClick = (clicked) => {
     setIsClicked({ ...initialState, [clicked]: true });
   };
@@ -33,6 +52,12 @@ export const ContextProvider = ({ children }) => {
         handleClick,
         screenSize,
         setScreenSize,
+        setColor,
+        setMode,
+        currentMode,
+        currentColor,
+        themeSettings,
+        setThemeSettings,
       }}
     >
       {children}

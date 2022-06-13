@@ -11,7 +11,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 // меню слева
 export const Sidebar = () => {
   // контекст для состояний меню
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, currentColor } = useStateContext();
 
   // на маленьких экранах меню закрывается при нажатии на ссылку
   const handleCloseSideBar = () => {
@@ -58,6 +58,10 @@ export const Sidebar = () => {
                     to={`/${link.name}`}
                     key={link.name}
                     onClick={handleCloseSideBar}
+                    // destructuring isActive prop from NavLink component
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : '',
+                    })}
                     className={({ isActive }) => (isActive ? activeLink : normalLink)}
                   >
                     {link.icon}
